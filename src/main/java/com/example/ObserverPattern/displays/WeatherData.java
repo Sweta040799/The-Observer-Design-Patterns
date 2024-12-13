@@ -2,10 +2,12 @@ package com.example.ObserverPattern.displays;
 
 import com.example.ObserverPattern.model.Observer;
 import com.example.ObserverPattern.model.Subject;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Component
 public class WeatherData implements Subject {
 
     private List<Observer> observers;

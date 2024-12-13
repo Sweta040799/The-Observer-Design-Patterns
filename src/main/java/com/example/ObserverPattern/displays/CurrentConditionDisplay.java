@@ -2,16 +2,13 @@ package com.example.ObserverPattern.displays;
 
 import com.example.ObserverPattern.model.DisplayElement;
 import com.example.ObserverPattern.model.Observer;
+import org.springframework.stereotype.Component;
 
+@Component
 public class CurrentConditionDisplay implements Observer, DisplayElement {
     private float temperature;
     private float humidity;
-    private WeatherData weatherData;
 
-    public CurrentConditionDisplay(WeatherData weatherData) {
-        this.weatherData = weatherData;
-        weatherData.registerObserver(this);
-    }
 
     @Override
     public void display() {
